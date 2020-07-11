@@ -9,19 +9,53 @@ output: html_document
 
 ## Introduction
 
-Physical injuries and their associated physiological responses continue to be a major contributor to the global burden of disease ^(1)^. According to the Global Burden of Disease report, an estimated 973 million incidences of injuries requiring a health intervention occurred in 2013 alone ^(2)^. Annually, nearly 6 million people die due to injuries and over 90% of these deaths occur in low- and middle-income countries ^(3)^.  
+Physical injuries and their associated physiological responses
+continue to be a major contributor to the global burden of disease
+^(1)^. According to the Global Burden of Disease report, an estimated
+973 million incidences of injuries requiring a health intervention
+occurred in 2013 alone ^(2)^. Annually, nearly 6 million people die
+due to injuries and over 90% of these deaths occur in low- and
+middle-income countries ^(3)^.
 
-With an expected increase in the global trend of violent injuries ^(3)^, it is imperative that holistic trauma care is guided by involving various components of health systems. This necessitates using prognostic trauma prediction models that include clinical parameters, anatomical distribution, injury severity scores ^(4)^, and the type and quality of trauma intervention required in the short and long term.  
+With an expected increase in the global trend of violent injuries
+^(3)^, it is imperative that holistic trauma care is guided by
+involving various components of health systems. This necessitates
+using prognostic trauma prediction models that include clinical
+parameters, anatomical distribution, injury severity scores ^(4)^, and
+the type and quality of trauma intervention required in the short and
+long term.
 
-Deaths due to injuries occur nearly twice as much in men than in women. Road traffic injury related deaths, which account for a quarter of the annual global trauma fatalities, occur almost three times as much in men than in women. However, more women die from burn injuries caused by fires ^(3)^. This disproportionality can be attributed to historical trends of increased risk-taking behavior and interpersonal violence in men.  
+Deaths due to injuries occur nearly twice as much in men than in
+women. Road traffic injury related deaths, which account for a quarter
+of the annual global trauma fatalities, occur almost three times as
+much in men than in women. However, more women die from burn injuries
+caused by fires ^(3)^. This disproportionality can be attributed to
+historical trends of increased risk-taking behavior and interpersonal
+violence in men.
 
-There is a paucity of literature studying the effect of pre-clinical factors such as sex on trauma outcomes, and prediction models continue to be designed with the same perceptional disparity ^(5)^. However, given the increased participation of women in activities exposing them to higher risk of trauma, such an inherent bias in predicted outcomes can potentially affect the quality of trauma care provided to women.  
+There is a paucity of literature studying the effect of pre-clinical
+factors such as sex on trauma outcomes, and prediction models continue
+to be designed with the same perceptional disparity ^(5)^. However,
+given the increased participation of women in activities exposing them
+to higher risk of trauma, such an inherent bias in predicted outcomes
+can potentially affect the quality of trauma care provided to women.
 
-It therefore stands to reason that fairness in trauma prediction models based on differences of sex need to be evaluated. This can help identify and correct any potential flaws in these models and improve trauma outcomes by informing better treatment protocols. The aim of this study is to apply various trauma prediction models on data focusing on both men and women and comparing each to assess the level of fairness.  
+It therefore stands to reason that fairness in trauma prediction
+models based on differences of sex need to be evaluated. This can help
+identify and correct any potential flaws in these models and improve
+trauma outcomes by informing better treatment protocols. The aim of
+this study is to apply various trauma prediction models on data
+focusing on both men and women and comparing each to assess the level
+of fairness.
 
 ## References  
 
-1. 	James SL, Abate D, Abate KH, Abay SM, Abbafati C, Abbasi N, et al. Global, regional, and national incidence, prevalence, and years lived with disability for 354 Diseases and Injuries for 195 countries and territories, 1990-2017: A systematic analysis for the Global Burden of Disease Study 2017. Lancet. 2018;392(10159):1789–858. 
+1. 	James SL, Abate D, Abate KH, Abay SM, Abbafati C, Abbasi N, et
+       al. Global, regional, and national incidence, prevalence, and
+       years lived with disability for 354 Diseases and Injuries for
+       195 countries and territories, 1990-2017: A systematic analysis
+       for the Global Burden of Disease
+       Study 2017. Lancet. 2018;392(10159):1789–858.
 2. 	Haagsma JA, Graetz N, Bolliger I, Naghavi M, Higashi H, Mullany EC, et al. The global burden of injury: Incidence, mortality, disability-adjusted life years and time trends from the global burden of disease study 2013. Inj Prev. 2016;22(1):3–18. 
 3. 	Who. Injuries and Violence: The Facts. Geneva, Switz WHO [Internet]. 2010;2–18. Available from: http://scholar.google.com/scholar?hl=en&btnG=Search&q=intitle:Injuries+and+Violence:+The+Facts#0
 4. 	Tohira H, Jacobs I, Mountain D, Gibson N, Yeo A. Systematic review of predictive performance of injury severity scoring tools. Scand J Trauma Resusc Emerg Med. 2012;20:1–12. 
