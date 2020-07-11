@@ -1,2 +1,2 @@
-# fariness-trauma-models
+# fairness-trauma-models
 Fairness in Trauma Prediction Models
