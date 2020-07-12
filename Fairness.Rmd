@@ -1,28 +1,37 @@
 ---
-title: "Fairness"
+title: "Fairness in Trauma Prediction Models"
 author: "Gizelle H"
 date: "11/07/2020"
-output: html_document
+csl: american-medical-association.csl
+output:
+  bookdown::html_document2:
+    number_sections: false
+  bookdown::word_document2:
+    number_sections: false    
+  bookdown::pdf_document2:
+    number_sections: false
+    toc: false
+    keep_tex: yes
+link-citations: yes
+bibliography: Fairness.bib
 ---
 
-# Fairness in Trauma Prediction Models
-
-## Introduction
+# Introduction
 
 Trauma continues to be a major contributor to the global burden of
-disease ^(1)^, with an estimated 973 million injuries requiring health
-intervention in 2013 alone ^(2)^<!-- Revised this to be more
+disease [@James2018], with an estimated 973 million injuries requiring health
+intervention in 2013 alone [@haagsma2016]<!-- Revised this to be more
 direct. Please check for a more recent reference than 2-->. Annually,
 nearly 6 million people die from trauma and over 90% of these deaths
-occur in low- and middle-income countries ^(3)^<!-- This is quite
+occur in low- and middle-income countries [@WHO2010]<!-- This is quite
 outdated. The latest GBD study indicate that the number of deaths is
 closer to  4.5 million -->.
 
-With an expected increase in trauma globally ^(3)^, it is imperative
+With an expected increase in trauma globally [@WHO2010], it is imperative
 that holistic trauma care is guided by involving various components of
 health systems. This necessitates using prognostic trauma prediction
 models that include clinical parameters, anatomical distribution,
-injury severity scores ^(4)^, and the type and quality of trauma
+injury severity scores [@tohira2012], and the type and quality of trauma
 intervention required in the short and long term<!-- Although the flow
 is nice I'm not sure I follow the logic. What is the connection
 between holistic trauma care and prediction models? Why does the
@@ -34,7 +43,7 @@ Deaths from trauma occur nearly twice as often in men compared with
 women. Road traffic injury related deaths, which account for a quarter
 of the annual global trauma fatalities, occur almost three times as
 much in men than in women<!-- See edit of previous sentence
--->. However, more women die from burns caused by fires ^(3)^. This
+-->. However, more women die from burns caused by fires [@WHO2010]. This
 disproportionality can be attributed to historical trends of increased
 risk-taking behavior and interpersonal violence in men<!-- Or that
 women don't reach health facilities... This sentence need an up to
@@ -42,7 +51,7 @@ date reference-->.
 
 There is a paucity of literature studying the effect of pre-clinical
 factors such as sex on trauma outcomes, and prediction models continue
-to be designed with the same perceptional disparity ^(5)^<!-- Are you
+to be designed with the same perceptional disparity [@spani2018]<!-- Are you
 sure this reference discuss prediction models? It looks like it deals
 with preclinical model systems.-->. However, given the increased
 participation of women in activities exposing them to higher risk of
@@ -62,16 +71,4 @@ this study is to apply various trauma prediction models on data
 focusing on both men and women and comparing each to assess the level
 of fairness<!-- This paragraph is okay for now-->.
 
-## References  
-
-1. 	James SL, Abate D, Abate KH, Abay SM, Abbafati C, Abbasi N, et
-       al. Global, regional, and national incidence, prevalence, and
-       years lived with disability for 354 Diseases and Injuries for
-       195 countries and territories, 1990-2017: A systematic analysis
-       for the Global Burden of Disease
-       Study 2017. Lancet. 2018;392(10159):1789–858.
-2. 	Haagsma JA, Graetz N, Bolliger I, Naghavi M, Higashi H, Mullany EC, et al. The global burden of injury: Incidence, mortality, disability-adjusted life years and time trends from the global burden of disease study 2013. Inj Prev. 2016;22(1):3–18. 
-3. 	Who. Injuries and Violence: The Facts. Geneva, Switz WHO [Internet]. 2010;2–18. Available from: http://scholar.google.com/scholar?hl=en&btnG=Search&q=intitle:Injuries+and+Violence:+The+Facts#0
-4. 	Tohira H, Jacobs I, Mountain D, Gibson N, Yeo A. Systematic review of predictive performance of injury severity scoring tools. Scand J Trauma Resusc Emerg Med. 2012;20:1–12. 
-5. 	Späni CB, Braun DJ, Van Eldik LJ. Sex-related responses after traumatic brain injury: Considerations for preclinical modeling. Front Neuroendocrinol. 2018;50:52–66.  
-
+# References  
