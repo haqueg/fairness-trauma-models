@@ -10,68 +10,144 @@ output: html_document
 ## Introduction
 
 Trauma continues to be a major contributor to the global burden of
-disease ^(1)^, with an estimated 973 million injuries requiring health
-intervention in 2013 alone ^(2)^<!-- Revised this to be more
-direct. Please check for a more recent reference than 2-->. Annually,
-nearly 6 million people die from trauma and over 90% of these deaths
-occur in low- and middle-income countries ^(3)^<!-- This is quite
-outdated. The latest GBD study indicate that the number of deaths is
-closer to  4.5 million -->.
+disease, with an estimated 520 million injuries requiring health
+interventions in 2017 alone ^(1)^ Annually, nearly 4.5 million people die due to trauma and over 90% of these deaths occur in low- and middle-income countries ^(2)^. 
 
-With an expected increase in trauma globally ^(3)^, it is imperative
-that holistic trauma care is guided by involving various components of
-health systems. This necessitates using prognostic trauma prediction
-models that include clinical parameters, anatomical distribution,
-injury severity scores ^(4)^, and the type and quality of trauma
-intervention required in the short and long term<!-- Although the flow
-is nice I'm not sure I follow the logic. What is the connection
-between holistic trauma care and prediction models? Why does the
-provision of the former require the latter? Prediction models may be
-needed to guide clinical decision making, quality assurance, and
-research. Maybe you can find a link there?--> .
+With an expected increase in trauma globally ^(3)^, it is imperative that holistic trauma care is guided not only by injury severity scores and emergency treatment guidelines, but by also taking into account the contextual differences in trauma settings such as gender or health economics ^(4)^. A way to improve those could be development of more inclusive prediction models that would inform better clinical judgement and ensure quality research and revision.
 
-Deaths from trauma occur nearly twice as often in men compared with
-women. Road traffic injury related deaths, which account for a quarter
-of the annual global trauma fatalities, occur almost three times as
-much in men than in women<!-- See edit of previous sentence
--->. However, more women die from burns caused by fires ^(3)^. This
-disproportionality can be attributed to historical trends of increased
-risk-taking behavior and interpersonal violence in men<!-- Or that
-women don't reach health facilities... This sentence need an up to
-date reference-->.
+Traumatic deaths occur nearly twice as much in men than in women. Road traffic injury related deaths, which account for a quarter of trauma fatalities worldwide, occur almost three times as much in men than in women. However, more women die from burn injuries caused by fires ^(3)^. This disproportionality can be attributed to increased incidences of interpersonal violence in men ^(5)^, and women seeking delayed medical care ^(6)^.
 
-There is a paucity of literature studying the effect of pre-clinical
-factors such as sex on trauma outcomes, and prediction models continue
-to be designed with the same perceptional disparity ^(5)^<!-- Are you
-sure this reference discuss prediction models? It looks like it deals
-with preclinical model systems.-->. However, given the increased
-participation of women in activities exposing them to higher risk of
-trauma, such an inherent bias in predicted outcomes can potentially
-affect the quality of trauma care provided to women<!-- Also that many
-models that are currently being used were developed in samples in
-which a majority were males. I think this paragraph would benefit from
-mentioning some of these models and the samples in which they were
-developed. Look at TRISS, RTS and KTS (Kampala trauma score), for
-example.-->
+Although there is limited and conflicting evidence of the protective effects of female gender on trauma outcomes ^(7,8)^, trauma databases include more male subjects ^(9,10)^ and prediction models continue to be designed with the same perceptional disparity. Most injury severity scores presently in use such as the Kampala Trauma Score (KTS), Revised Trauma Score (RTS), Trauma and Injury Severity Score (TRISS), A Severity Characterization Of Trauma (ASCOT) and Base deficit and Injury Severity Score (BISS), were also developed with a majority male population database ^(11,12)^. However, given the increased participation of women in activities exposing them to higher risk of trauma, such an inherent bias in predicted outcomes can potentially affect the quality of trauma care provided to women.
 
-It therefore stands to reason that fairness in trauma prediction
-models based on differences of sex need to be evaluated. This can help
-identify and correct any potential flaws in these models and improve
-trauma outcomes by informing better treatment protocols. The aim of
-this study is to apply various trauma prediction models on data
-focusing on both men and women and comparing each to assess the level
-of fairness<!-- This paragraph is okay for now-->.
+It therefore stands to reason that fairness in trauma prediction models based on differences of sex needs to be evaluated. This can help identify and correct any potential flaws in these models and improve trauma outcomes by informing better treatment protocols. The aim of this study is to apply various trauma prediction models on data focusing on both men and women and comparing each to assess the level of fairness.
 
-## References  
+## References
 
-1. 	James SL, Abate D, Abate KH, Abay SM, Abbafati C, Abbasi N, et
-       al. Global, regional, and national incidence, prevalence, and
-       years lived with disability for 354 Diseases and Injuries for
-       195 countries and territories, 1990-2017: A systematic analysis
-       for the Global Burden of Disease
-       Study 2017. Lancet. 2018;392(10159):1789–858.
-2. 	Haagsma JA, Graetz N, Bolliger I, Naghavi M, Higashi H, Mullany EC, et al. The global burden of injury: Incidence, mortality, disability-adjusted life years and time trends from the global burden of disease study 2013. Inj Prev. 2016;22(1):3–18. 
+1. 	James SL, Abate D, Abate KH, Abay SM, Abbafati C, Abbasi N, et al. Global, regional, and national incidence, prevalence, and years lived with disability for 354 Diseases and Injuries for 195 countries and territories, 1990-2017: A systematic analysis for the Global Burden of Disease Study 2017. Lancet. 2018;392(10159):1789–858. 
+2. 	Roth GA, Abate D, Abate KH, Abay SM, Abbafati C, Abbasi N, et al. Global, regional, and national age-sex-specific mortality for 282 causes of death in 195 countries and territories, 1980–2017: a systematic analysis for the Global Burden of Disease Study 2017. Lancet. 2018;392(10159):1736–88. 
 3. 	Who. Injuries and Violence: The Facts. Geneva, Switz WHO [Internet]. 2010;2–18. Available from: http://scholar.google.com/scholar?hl=en&btnG=Search&q=intitle:Injuries+and+Violence:+The+Facts#0
-4. 	Tohira H, Jacobs I, Mountain D, Gibson N, Yeo A. Systematic review of predictive performance of injury severity scoring tools. Scand J Trauma Resusc Emerg Med. 2012;20:1–12. 
-5. 	Späni CB, Braun DJ, Van Eldik LJ. Sex-related responses after traumatic brain injury: Considerations for preclinical modeling. Front Neuroendocrinol. 2018;50:52–66.  
+4. 	Shaw LJ, Pepine CJ, Xie J, Mehta PK, Morris AA, Dickert NW, et al. Quality and Equitable Health Care Gaps for Women: Attributions to Sex Differences in Cardiovascular Medicine. J Am Coll Cardiol. 2017;70(3):373–88. 
+5. 	Tingne CV, Shrigiriwar MB, Ghormade PS, Kumar NB. Quantitative analysis of injury characteristics in victims of interpersonal violence: An emergency department perspective. J Forensic Leg Med [Internet]. 2014;26(70):19–23. Available from: http://dx.doi.org/10.1016/j.jflm.2014.06.003
+6. 	Tenenbaum A, Nordeman L, Sunnerhagen KS, Gunnarsson R. Gender differences in care-seeking behavior and healthcare consumption immediately after whiplash trauma. PLoS One. 2017;12(4):1–9. 
+7. 	Sharpe JP, Magnotti LJ, Weinberg JA, Brocker JA, Schroeppel TJ, Zarzaur BL, et al. Gender disparity in ventilator-associated pneumonia following trauma: Identifying risk factors for mortality. J Trauma Acute Care Surg. 2014;77(1):161–5. 
+8. 	Pape M, Giannakópoulos GF, Zuidema WP, De Lange-Klerk ESM, Toor EJ, Edwards MJR, et al. Is there an association between female gender and outcome in severe trauma? A multi-center analysis in the Netherlands. Scand J Trauma Resusc Emerg Med. 2019;27(1):1–10. 
+9. 	Haider AH, Crompton JG, Oyetunji T, Stevens KA, Efron DT, Kieninger AN, et al. Females have fewer complications and lower mortality following trauma than similarly injured males: A risk adjusted analysis of adults in the National Trauma Data Bank. Surgery [Internet]. 2009;146(2):308–15. Available from: http://dx.doi.org/10.1016/j.surg.2009.05.006
+10. 	Meng R, Xu X, Xu Y, Luo C, Xu H, Wang Y, et al. Epidemiological characteristics of injury mortality in Guangdong Province, China, 2015. BMC Public Health. 2019;19(1):1–8. 
+11. 	Akay S, Ozturk AM, Akay H. Comparison of modified Kampala trauma score with trauma mortality prediction model and trauma-injury severity score: A National Trauma Data Bank Study. Am J Emerg Med [Internet]. 2017;35(8):1056–9. Available from: http://dx.doi.org/10.1016/j.ajem.2017.02.035
+12. 	Tohira H, Jacobs I, Mountain D, Gibson N, Yeo A. Systematic review of predictive performance of injury severity scoring tools. Scand J Trauma Resusc Emerg Med. 2012;20:1–12.  
 
+
+> _Need better understanding of which statistical functions need to applied_
+> _and what the parameters are for prediction model validation_
+
+
+## Methods  
+
+_1.1 Study design & data sources_
+
+The study is a retrospective, comparative analysis of an existing
+multicenter, trauma registry dataset based on the TITCO
+(Towards Improved Trauma Care Outcomes) cohort. 
+
+_1.2 Key study dates_
+
+This retrospective analysis was carried out between [dates] based
+on data directly observed or retrieved from patient records between
+July 2013 and December 2015.
+
+_2.1 Study setting_
+
+The patient data was collected from four hospitals within urban,
+Indian cities of Mumbai, New Delhi & Kolkata. This included two
+tertiary care hospitals with dedicated trauma wards and one without,
+while the fourth was a dedicated trauma center.
+
+_2.2 Eligibility criteria_
+
+All patients presenting with trauma, alive at the time of arrival,
+and who were admitted to the hospitals were included in the dataset,
+regardless of age or gender. Those dying between arrival and
+admission were also included. The exclusion criteria were subjects
+dead on arrival and those presenting exclusively with peripheral injuries. 
+
+_2.3 Treatment details_
+
+Patients requiring surgical intervention for injuries following
+immediate emergency treatment for injuries were operated upon depending
+on type and severity of injury. _[Not sure how much detail is required here]._
+
+_3.1 Predicted outcome_
+
+The predicted outcome would be death following trauma with or
+without surgical intervention, within 48 hours to 30 days from
+time of arrival at the hospital.
+
+_3.2 Actions to blind outcome assessment_
+
+Using a standardized criterion to record patient data regardless
+of demographic details and including all predefined predictors
+as applicable.
+
+_4.1 Predictors and measurement_
+
+-	Grouping trauma by anatomical regions based on the abbreviated
+        injury scale (AIS).
+-	Assigning an AIS grading to each primary injury and any secondary
+        injuries – recorded via CT reports, x-ray findings, FAST findings,
+        intraoperative diagnosis & physician notes.
+-	Assigning standardized ICD-10 codes for nature of injury.
+-	Assigning injury severity scores (ISS) and new injury severity
+        scores (NISS) to all subjects based on the AIS.
+-	Recording vital sign parameters at fixed time intervals for all patients.
+-	Recording GCS scores at fixed time intervals for all patients.
+-	Recording hemoglobin and hematocrit status on admission for all patients.
+
+_4.2 Actions to blind predictor assessment_
+
+-	Ensuring expert opinion in recording intraoperative diagnoses
+        and assigning primary injury.
+-	Following standardized coding methods (ICD-10)
+-	Ensuring all coders receive similar standardized training
+        for data collection. 
+
+_5. Sample size_
+
+The sample size comprised of 16,000 trauma patients received at the four
+participating hospitals.
+
+_6. Missing data_
+
+Patients parameters that could not be directly observed in the
+trauma/resuscitation unit were retrieved from hospital records to
+ensure uniformity of data. Subjects with incomplete data were
+excluded from assessment.
+
+_7.1 Predictor analysis_
+
+All descriptors were compared for survivors and non-survivors
+through descriptive statistical analyses and using logistical
+regression where required. Continuous variables were calculated
+using student t-test. Odds Ratios were calculated for non-survivors
+against relevant descriptors. All categorical variables were assessed
+_[via Chi-square?]_ for data divided by female and male sex.
+
+_7.2 Type of model and predictor selection_
+
+Predictive models for trauma mortality, based on anatomical distribution
+of injuries and physiological variables were applied to the dataset.
+Predictive value of site and type of injury; changes in systolic blood
+pressure, heart rate & GCS scores; differences in time of injury, time
+of arrival and first surgical intervention was assessed and validated
+_[does the receiver operating characteristics curve have a function here?]_
+
+_7.3 Measures used to assess & compare model performance_
+
+Standard error of means was calculated for analyzed variables and compared
+across various predictive models applied to the dataset based on gender
+differences. _[Mention ROCC?]_
+
+_8. Risk groups_
+
+Female sex was identified as a potentially underserved group due
+to a larger number of male subjects within the database and variables
+were analyzed against data divided by gender.
