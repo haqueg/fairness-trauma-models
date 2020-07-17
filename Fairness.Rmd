@@ -10,18 +10,47 @@ output: html_document
 ## Introduction
 
 Trauma continues to be a major contributor to the global burden of
-disease, with an estimated 520 million injuries requiring health
-interventions in 2017 alone ^(1)^ Annually, nearly 4.5 million people die due to trauma and over 90% of these deaths occur in low- and middle-income countries ^(2)^. 
+disease - an estimated 520 million injuries required health
+interventions in 2017 alone ^(1)^ Annually, nearly 4.5 million people
+die due to trauma and over 90% of these deaths occur in low- and
+middle-income countries ^(2)^.
 
-With an expected increase in trauma globally ^(3)^, it is imperative that holistic trauma care is guided not only by injury severity scores and emergency treatment guidelines, but by also taking into account the contextual differences in trauma settings such as gender or health economics ^(4)^. A way to improve those could be development of more inclusive prediction models that would inform better clinical judgement and ensure quality research and revision.
+<!-- Okay, replace the next paragraph with a paragraph on trauma
+mortality prediction models. What they are and why they are
+used. Mention: "such as the Kampala Trauma Score (KTS), Revised Trauma
+Score (RTS), Trauma and Injury Severity Score (TRISS), A Severity
+Characterization Of Trauma (ASCOT) and Base deficit and Injury
+Severity Score (BISS)"-->
 
-Traumatic deaths occur nearly twice as much in men than in women. Road traffic injury related deaths, which account for a quarter of trauma fatalities worldwide, occur almost three times as much in men than in women. However, more women die from burn injuries caused by fires ^(3)^. This disproportionality can be attributed to increased incidences of interpersonal violence in men ^(5)^, and women seeking delayed medical care ^(6)^.
+With an expected increase in trauma globally ^(3)^, it is imperative
+that holistic trauma care is guided also by gender and health economic
+considerations ^(4)^. A way to improve those could be development of
+more inclusive prediction models that would inform better clinical
+judgement and ensure quality research and revision. <!-- Remove this
+paragraph -->
 
-Although there is limited and conflicting evidence of the protective effects of female gender on trauma outcomes ^(7,8)^, trauma databases include more male subjects ^(9,10)^ and prediction models continue to be designed with the same perceptional disparity. Most injury severity scores presently in use such as the Kampala Trauma Score (KTS), Revised Trauma Score (RTS), Trauma and Injury Severity Score (TRISS), A Severity Characterization Of Trauma (ASCOT) and Base deficit and Injury Severity Score (BISS), were also developed with a majority male population database ^(11,12)^. However, given the increased participation of women in activities exposing them to higher risk of trauma, such an inherent bias in predicted outcomes can potentially affect the quality of trauma care provided to women.
+Deaths from trauma are disproportionately distributed between men and
+women. Road traffic injury related deaths occur almost three times as
+much in men than in women whereas burn injury related deaths occur
+more in women ^(3)^. This disproportionality can be attributed to
+increased incidences of interpersonal violence in men ^(5)^, and women
+seeking delayed medical care ^(6)^. <!-- I think you can remove this
+as well -->
 
-It therefore stands to reason that fairness in trauma prediction models based on differences of sex needs to be evaluated. This can help identify and correct any potential flaws in these models and improve trauma outcomes by informing better treatment protocols. The aim of this study is to apply various trauma prediction models on data focusing on both men and women and comparing each to assess the level of fairness.
+Trauma databases include more men than women ^(9,10)^, and most trauma
+severity scores were developed in overwhelmingly male populations
+^(11,12)^. The effect of this inherent bias on the fairness
+(distribution of model errors), have not been previously studied
+despite potentially affecting the quality of care provided to women.
 
-## References
+The study of fairness in trauma prediction models can help identify
+and correct potential flaws in these models and improve trauma
+outcomes by informing better treatment protocols. The aim of this
+study is to assess and compare the fairness of various trauma
+prediction models.<!-- The first part of this paragraph may fit better
+in Discussion later, but let's keep it here for now -->
+
+## References <!-- Move this to last in the document -->
 
 1. 	James SL, Abate D, Abate KH, Abay SM, Abbafati C, Abbasi N, et al. Global, regional, and national incidence, prevalence, and years lived with disability for 354 Diseases and Injuries for 195 countries and territories, 1990-2017: A systematic analysis for the Global Burden of Disease Study 2017. Lancet. 2018;392(10159):1789–858. 
 2. 	Roth GA, Abate D, Abate KH, Abay SM, Abbafati C, Abbasi N, et al. Global, regional, and national age-sex-specific mortality for 282 causes of death in 195 countries and territories, 1980–2017: a systematic analysis for the Global Burden of Disease Study 2017. Lancet. 2018;392(10159):1736–88. 
@@ -41,54 +70,51 @@ It therefore stands to reason that fairness in trauma prediction models based on
 > _and what the parameters are for prediction model validation_
 
 
-## Methods  
+## Methods
 
-_1.1 Study design & data sources_
+### 1.1 Study design & data sources
 
-The study is a retrospective, comparative analysis of an existing
-multicenter, trauma registry dataset based on the TITCO
-(Towards Improved Trauma Care Outcomes) cohort. 
+Our study is a retrospective analysis of the anonymous multicentre
+Towards Improved Trauma Care Outcomes (TITCO) in India cohort.
 
-_1.2 Key study dates_
+### 1.2 Key study dates
 
-This retrospective analysis was carried out between [dates] based
-on data directly observed or retrieved from patient records between
-July 2013 and December 2015.
+We conducted this analysis between [dates] based on data directly
+observed or retrieved from patient records between July 2013 and
+December 2015.
 
-_2.1 Study setting_
+### 2.1 Study setting
 
 The patient data was collected from four hospitals within urban,
-Indian cities of Mumbai, New Delhi & Kolkata. This included two
+Indian cities of Mumbai, New Delhi and Kolkata. This included two
 tertiary care hospitals with dedicated trauma wards and one without,
-while the fourth was a dedicated trauma center.
+while the fourth was a dedicated trauma centre.
 
-_2.2 Eligibility criteria_
+### 2.2 Eligibility criteria
 
-All patients presenting with trauma, alive at the time of arrival,
-and who were admitted to the hospitals were included in the dataset,
-regardless of age or gender. Those dying between arrival and
-admission were also included. The exclusion criteria were subjects
-dead on arrival and those presenting exclusively with peripheral injuries. 
+The TITCO cohort includes all patients presenting with trauma, alive
+at the time of arrival, and who were admitted to the participating
+hospitals, regardless of age or gender. Those dying between arrival
+and admission were also included. The exclusion criteria were subjects
+dead on arrival and those presenting exclusively with peripheral
+injuries.
 
-_2.3 Treatment details_
+### 3.1 Predicted outcome
 
-Patients requiring surgical intervention for injuries following
-immediate emergency treatment for injuries were operated upon depending
-on type and severity of injury. _[Not sure how much detail is required here]._
+The predicted outcome is death following trauma with or without
+surgical intervention, within 48 hours to 30 days from time of arrival
+at the hospital.<!-- Why not before 48 hours? -->
 
-_3.1 Predicted outcome_
+### 3.2 Actions to blind outcome assessment
 
-The predicted outcome would be death following trauma with or
-without surgical intervention, within 48 hours to 30 days from
-time of arrival at the hospital.
-
-_3.2 Actions to blind outcome assessment_
-
-Using a standardized criterion to record patient data regardless
-of demographic details and including all predefined predictors
+All data was collected based on standardized criteria regardless of
+demographic details and outcomes, including all predefined predictors
 as applicable.
 
-_4.1 Predictors and measurement_
+### 4.1 Predictors and measurement
+<!-- Read up on the models you mention in the introduction and check
+which of those that can be calculated in the TITCO data. Then list the
+variables included in those models in this section -->
 
 -	Grouping trauma by anatomical regions based on the abbreviated
         injury scale (AIS).
@@ -102,52 +128,72 @@ _4.1 Predictors and measurement_
 -	Recording GCS scores at fixed time intervals for all patients.
 -	Recording hemoglobin and hematocrit status on admission for all patients.
 
-_4.2 Actions to blind predictor assessment_
+### 4.2 Actions to blind predictor assessment
 
 -	Ensuring expert opinion in recording intraoperative diagnoses
         and assigning primary injury.
 -	Following standardized coding methods (ICD-10)
 -	Ensuring all coders receive similar standardized training
         for data collection. 
+<!-- Not sure about this section, but let's keep it for now -->		
 
-_5. Sample size_
+### 5. Sample size
 
-The sample size comprised of 16,000 trauma patients received at the four
-participating hospitals.
+<!-- Here we need to calculate if this is enough to detect a
+difference in mean absolute prediction error between men and women
+-->
 
-_6. Missing data_
+```{r sample-size-calculation, echo = FALSE, include = FALSE}
+## This is how you can mix text and code
 
-Patients parameters that could not be directly observed in the
-trauma/resuscitation unit were retrieved from hospital records to
-ensure uniformity of data. Subjects with incomplete data were
-excluded from assessment.
+## Let's use mean absolute prediction error (MAPE) as the study
+## outcome. This is calculated as the mean absolute difference between
+## the actual outcome (1 = died, 0 = survived) and the predicted
+## probability of that outcome. So let's say a patient died with a
+## probability of death of 0.8 (estimated by a model). Then the APE
+## for this patient is 0.2. The mean of all APEs is MAPE. Because MAPE
+## can be considered continuous we can use a t-test to compare MAPE
+## between men and women. We can use a paired t-test to compare
+## the difference in MAPE between men and women between two models.
 
-_7.1 Predictor analysis_
+library(pwr)
 
-All descriptors were compared for survivors and non-survivors
-through descriptive statistical analyses and using logistical
-regression where required. Continuous variables were calculated
-using student t-test. Odds Ratios were calculated for non-survivors
-against relevant descriptors. All categorical variables were assessed
-_[via Chi-square?]_ for data divided by female and male sex.
+## Using 0.2 to represent a "small" effect size, see for example https://people.bath.ac.uk/pssiw/stats2/page2/page14/page14.html#:~:text=Cohen%20suggested%20that%20d%3D0.2,a%20'large'%20effect%20size.&text=Partial%20eta%2Dsquared%20isn't,most%20purposes%20and%20is%20publishable.
+stats <- pwr.t.test(d = 0.2, power = 0.8, type = "two.sample", alternative = "two.sided")
+stats.paired <- pwr.t.test(d = 0.2, power = 0.8, type = "paired", alternative = "two.sided")
 
-_7.2 Type of model and predictor selection_
+```
 
-Predictive models for trauma mortality, based on anatomical distribution
-of injuries and physiological variables were applied to the dataset.
-Predictive value of site and type of injury; changes in systolic blood
-pressure, heart rate & GCS scores; differences in time of injury, time
-of arrival and first surgical intervention was assessed and validated
-_[does the receiver operating characteristics curve have a function here?]_
+The TITCO cohort includes 16,000 trauma patients admitted to the four
+participating hospitals. We need at least `r stats$n` men and as
+many women, coming to a minimum total sample size of `r stats$n*2`,
+to detect an effect size of 0.2 (considered a small effect size [ADD
+REF]) when comparing the mean absolute prediction error between men
+and women for any model with 80% power and a significance level of 5%.
 
-_7.3 Measures used to assess & compare model performance_
+### 6. Missing data
 
-Standard error of means was calculated for analyzed variables and compared
-across various predictive models applied to the dataset based on gender
-differences. _[Mention ROCC?]_
+We will perform a complete case analysis, meaning that patients with
+missing values in any predictor or outcome will be excluded.
 
-_8. Risk groups_
+### 7.1 Predictor analysis
 
-Female sex was identified as a potentially underserved group due
-to a larger number of male subjects within the database and variables
-were analyzed against data divided by gender.
+We will describe predictor values separately for men and women.<!-- No
+need to test potential differences formally-->
+
+### 7.2 Type of model and predictor selection
+
+Prediction models for trauma mortality, based on anatomical
+distribution of injuries and physiological variables were applied to
+the dataset.<!-- See my comments on 4.1 --> Predictive value of site and
+type of injury; changes in systolic blood pressure, heart rate & GCS
+scores; differences in time of injury, time of arrival and first
+surgical intervention was assessed and validated _[does the receiver
+operating characteristics curve have a function here?]_
+
+### 7.3 Measures used to assess and compare model performance
+
+Standard error of means was calculated for analyzed variables and
+compared across various predictive models applied to the dataset based
+on gender differences<!-- See the sample size section for details on
+the study outcome, revise accordingly -->. _[Mention ROCC?]_
