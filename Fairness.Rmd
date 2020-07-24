@@ -22,21 +22,30 @@ bibliography: bibliography.bib
 
 Trauma continues to be a major contributor to the global burden of
 disease - an estimated 520 million injuries required health
-interventions in 2017 alone [@James2018]. Annually, nearly 4.5 million people
-die due to trauma and over 90% of these deaths occur in low- and
-middle-income countries [@Roth2018].
+interventions in 2017 alone [@James2018]. Annually, nearly 4.5 million
+people die due to trauma and over 90% of these deaths occur in low-
+and middle-income countries [@Roth2018].
 
-Trauma mortality prediction models aim to quantify prognostic variables
-in traumatic injuries to predict the probability of survival in different
-categories of trauma patients. These models ensure better quality control
-and evaluation of trauma systems to improve outcomes [@Cook2014]. Indices
-such as the Injury Severity Score (ISS), the New Injury Severity Score (NISS)
-and Trauma Mortality Prediction Model (TMPM) are based on anatomic region of
-injury [@Haider2012]. The ISS and NISS employ the Abbreviated Injury Scale
-(AIS) which assigns scores based on region and type of anatomic structure
-injured and the severity of the injury. The TMPM can be based either on the
-AIS or the International Classification of Diseases 10th Clinical Modification
-(ICD-10-CM) coding of injuries [@Osler2019]. 
+Trauma mortality prediction models aim to estimate the probability of
+death in trauma patients and improve quality control and evaluation of
+trauma systems [@Cook2014]. The most commonly used trauma mortality
+prediction models are ... <!-- List the major ones here, keep it to
+1.5 lines -->
+
+<!-- Use one paragraph (5 lines) to elaborate on these models-->
+
+<!-- Move the most important parts of these two paragraphs to the list
+of the most commonly used models and to the paragraph that elaborates
+on those.
+
+Indices such as the Injury Severity Score (ISS),
+the New Injury Severity Score (NISS) and Trauma Mortality Prediction
+Model (TMPM) are based on anatomic region of injury [@Haider2012]. The
+ISS and NISS employ the Abbreviated Injury Scale (AIS) which assigns
+scores based on region and type of anatomic structure injured and the
+severity of the injury. The TMPM can be based either on the AIS or the
+International Classification of Diseases 10th Clinical Modification
+(ICD-10-CM) coding of injuries [@Osler2019].
 
 Other models use a combination of anatomic and physiological parameters to
 predict mortality. These include the Kampala Trauma Score (KTS) which uses age,
@@ -47,12 +56,14 @@ is a combination of RTS, ISS and age index, A Severity Characterization of
 Trauma (ASCOT), which uses AIS, RTS and age [@Champion1996]; and Base-deficit
 Injury Severity Score (BISS), which employs the base-deficit, ISS and age
 index [@Lam2016].
+-->
 
 Trauma databases include more men than women [@Haider2009; @Meng2019],
-and most trauma severity scores were developed in overwhelmingly male populations
-[@Akay2017; @Tohira2012]. The effect of this inherent bias on the fairness
-(distribution of model errors) has not been previously studied
-despite potentially affecting the quality of care provided to women.
+and most trauma severity scores were developed in overwhelmingly male
+populations [@Akay2017; @Tohira2012]. The effect of this inherent bias
+on the fairness (distribution of model errors) has not been previously
+studied despite potentially affecting the quality of care provided to
+women.
 
 The study of fairness in trauma prediction models can help identify
 and correct potential flaws in these models and improve trauma
@@ -62,7 +73,6 @@ prediction models.
 
 
 ## Methods
-
 
 ### 1.1 Study design & data sources
 
@@ -131,9 +141,9 @@ stats.paired <- pwr.t.test(d = 0.2, power = 0.8, type = "paired", alternative = 
 ```
 
 The TITCO cohort includes 16,000 trauma patients admitted to the four
-participating hospitals. We need at least `r stats$n` men and as
-many women, coming to a minimum total sample size of `r stats$n*2`,
-to detect an effect size of 0.2 (considered a small effect size
+participating hospitals. We need at least `r stats$n` men and as many
+women, coming to a minimum total sample size of `r stats$n*2`, to
+detect an effect size of 0.2 (considered a small effect size
 [@Cohen1988; @Lakens2013]) when comparing the mean absolute prediction
 error between men and women for any model with 80% power and a
 significance level of 5%.
@@ -155,10 +165,13 @@ representative of these models are listed above.
 
 ### 7.3 Measures used to assess and compare model performance
 
-The Mean Absolute Prediction Error (MAPE) for each specified model
-was calculated and compared for differences in sex via independent t-tests.
-Comparisons of MAPE differences across each model were done via paired
-t-tests to assess level of fairness [definition provided elsewhere].
-
+The mean absolute prediction error for each specified model was
+calculated and is presented separately for men and women. We also
+calculated the absolute and relative difference in mean absolute
+prediction error between men and women. We compare these differences
+independent t-tests. We also compared differences in mean absolute
+prediction error between men and women across models in a pair wise
+fashion using paired t-tests. A model with a smaller difference in
+mean absolute prediction error was considered more fair.
 
 ## References
