@@ -13,7 +13,7 @@ output:
     toc: false
     keep_tex: yes
 link-citations: yes
-bibliography: My Collection.bib
+bibliography: bibliography.bib
 ---
 
 # Fairness in Trauma Prediction Models
