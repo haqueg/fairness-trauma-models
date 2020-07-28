@@ -29,34 +29,8 @@ and middle-income countries [@Roth2018].
 Trauma mortality prediction models aim to estimate the probability of
 death in trauma patients and improve quality control and evaluation of
 trauma systems [@Cook2014]. The most commonly used trauma mortality
-prediction models are ... <!-- List the major ones here, keep it to
-1.5 lines -->
-
-<!-- Use one paragraph (5 lines) to elaborate on these models-->
-
-<!-- Move the most important parts of these two paragraphs to the list
-of the most commonly used models and to the paragraph that elaborates
-on those.
-
-Indices such as the Injury Severity Score (ISS),
-the New Injury Severity Score (NISS) and Trauma Mortality Prediction
-Model (TMPM) are based on anatomic region of injury [@Haider2012]. The
-ISS and NISS employ the Abbreviated Injury Scale (AIS) which assigns
-scores based on region and type of anatomic structure injured and the
-severity of the injury. The TMPM can be based either on the AIS or the
-International Classification of Diseases 10th Clinical Modification
-(ICD-10-CM) coding of injuries [@Osler2019].
-
-Other models use a combination of anatomic and physiological parameters to
-predict mortality. These include the Kampala Trauma Score (KTS) which uses age,
-systolic blood pressure (SBP), respiratory rate (RR), neurological status and
-number of injuries; Revised Trauma Score (RTS), uses the Glasgow Coma Scale
-(GCS), SBP and RR [@Akay2017]; Trauma and Injury Severity Score (TRISS), which
-is a combination of RTS, ISS and age index, A Severity Characterization of
-Trauma (ASCOT), which uses AIS, RTS and age [@Champion1996]; and Base-deficit
-Injury Severity Score (BISS), which employs the base-deficit, ISS and age
-index [@Lam2016].
--->
+prediction models are Trauma Mortality Prediction Model (TMPM), New/Injury
+Severity Score (N/ISS) and the Revised Trauma Score (RTS).
 
 Trauma databases include more men than women [@Haider2009; @Meng2019],
 and most trauma severity scores were developed in overwhelmingly male
@@ -76,7 +50,7 @@ prediction models.
 
 ### 1.1 Study design & data sources
 
-Our study is a retrospective analysis of the anonymous multicentre
+Our study is a retrospective analysis of the anonymous multicenter
 Towards Improved Trauma Care Outcomes (TITCO) in India cohort.
 
 ### 1.2 Key study dates
@@ -90,7 +64,7 @@ December 2015.
 The patient data was collected from four hospitals within urban,
 Indian cities of Mumbai, New Delhi and Kolkata. This included two
 tertiary care hospitals with dedicated trauma wards and one without,
-while the fourth was a dedicated trauma centre.
+while the fourth was a dedicated trauma center.
 
 ### 2.2 Eligibility criteria
 
@@ -160,8 +134,17 @@ missing values in any predictor or outcome will be excluded.
 ### 7.2 Type of model and predictor selection
 
 The data collected in the TITCO cohort allows for the comparison of the
-ISS, NISS, TMPM-ICD-10-CM, KTS, TRISS and ASCOT models. The variables
-representative of these models are listed above.
+ISS, NISS, TMPM-ICD-10-CM, KTS, TRISS and ASCOT models. The ISS,
+New ISS and TMPM are based on anatomic region of injury [@Haider2012] and
+use the Abbreviated Injury Scale (AIS) which assigns scores based on region
+and type of anatomic structure injured and the severity of the injury.
+
+Other models use a combination of parameters. The Kampala Trauma Score (KTS)
+uses age, systolic blood pressure (SBP), respiratory rate (RR), neurological
+status and number of injuries; Revised Trauma Score (RTS) uses the Glasgow Coma
+Scale (GCS), SBP and RR [@Akay2017]; Trauma and Injury Severity Score (TRISS) is
+a combination of RTS, ISS and age index; while A Severity Characterization of
+Trauma (ASCOT) uses AIS, RTS and age [@Champion1996]
 
 ### 7.3 Measures used to assess and compare model performance
 
@@ -169,9 +152,10 @@ The mean absolute prediction error for each specified model was
 calculated and is presented separately for men and women. We also
 calculated the absolute and relative difference in mean absolute
 prediction error between men and women. We compare these differences
-independent t-tests. We also compared differences in mean absolute
+using independent t-tests. We also compared differences in mean absolute
 prediction error between men and women across models in a pair wise
 fashion using paired t-tests. A model with a smaller difference in
 mean absolute prediction error was considered more fair.
+
 
 ## References

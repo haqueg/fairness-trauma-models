@@ -389,33 +389,20 @@ summary {
 <h2>Introduction</h2>
 <p>Trauma continues to be a major contributor to the global burden of
 disease - an estimated 520 million injuries required health
-interventions in 2017 alone.<span class="citation"><sup><a href="#ref-James2018" role="doc-biblioref">1</a></sup></span> Annually, nearly 4.5 million people
-die due to trauma and over 90% of these deaths occur in low- and
-middle-income countries.<span class="citation"><sup><a href="#ref-Roth2018" role="doc-biblioref">2</a></sup></span></p>
-<p>Trauma mortality prediction models aim to quantify prognostic variables
-in traumatic injuries to predict the probability of survival in different
-categories of trauma patients. These models ensure better quality control
-and evaluation of trauma systems to improve outcomes.<span class="citation"><sup><a href="#ref-Cook2014" role="doc-biblioref">3</a></sup></span> Indices
-such as the Injury Severity Score (ISS), the New Injury Severity Score (NISS)
-and Trauma Mortality Prediction Model (TMPM) are based on anatomic region of
-injury.<span class="citation"><sup><a href="#ref-Haider2012" role="doc-biblioref">4</a></sup></span> The ISS and NISS employ the Abbreviated Injury Scale
-(AIS) which assigns scores based on region and type of anatomic structure
-injured and the severity of the injury. The TMPM can be based either on the
-AIS or the International Classification of Diseases 10th Clinical Modification
-(ICD-10-CM) coding of injuries.<span class="citation"><sup><a href="#ref-Osler2019" role="doc-biblioref">5</a></sup></span></p>
-<p>Other models use a combination of anatomic and physiological parameters to
-predict mortality. These include the Kampala Trauma Score (KTS) which uses age,
-systolic blood pressure (SBP), respiratory rate (RR), neurological status and
-number of injuries; Revised Trauma Score (RTS), uses the Glasgow Coma Scale
-(GCS), SBP and RR;<span class="citation"><sup><a href="#ref-Akay2017" role="doc-biblioref">6</a></sup></span> Trauma and Injury Severity Score (TRISS), which
-is a combination of RTS, ISS and age index, A Severity Characterization of
-Trauma (ASCOT), which uses AIS, RTS and age;<span class="citation"><sup><a href="#ref-Champion1996" role="doc-biblioref">7</a></sup></span> and Base-deficit
-Injury Severity Score (BISS), which employs the base-deficit, ISS and age
-index.<span class="citation"><sup><a href="#ref-Lam2016" role="doc-biblioref">8</a></sup></span></p>
-<p>Trauma databases include more men than women,<span class="citation"><sup><a href="#ref-Haider2009" role="doc-biblioref">9</a>,<a href="#ref-Meng2019" role="doc-biblioref">10</a></sup></span>
-and most trauma severity scores were developed in overwhelmingly male populations.<span class="citation"><sup><a href="#ref-Akay2017" role="doc-biblioref">6</a>,<a href="#ref-Tohira2012" role="doc-biblioref">11</a></sup></span> The effect of this inherent bias on the fairness
-(distribution of model errors) has not been previously studied
-despite potentially affecting the quality of care provided to women.</p>
+interventions in 2017 alone.<span class="citation"><sup><a href="#ref-James2018" role="doc-biblioref">1</a></sup></span> Annually, nearly 4.5 million
+people die due to trauma and over 90% of these deaths occur in low-
+and middle-income countries.<span class="citation"><sup><a href="#ref-Roth2018" role="doc-biblioref">2</a></sup></span></p>
+<p>Trauma mortality prediction models aim to estimate the probability of
+death in trauma patients and improve quality control and evaluation of
+trauma systems.<span class="citation"><sup><a href="#ref-Cook2014" role="doc-biblioref">3</a></sup></span> The most commonly used trauma mortality
+prediction models are Trauma Mortality Prediction Model (TMPM), New/Injury
+Severity Score (N/ISS) and the Revised Trauma Score (RTS).</p>
+<p>Trauma databases include more men than women,<span class="citation"><sup><a href="#ref-Haider2009" role="doc-biblioref">4</a>,<a href="#ref-Meng2019" role="doc-biblioref">5</a></sup></span>
+and most trauma severity scores were developed in overwhelmingly male
+populations.<span class="citation"><sup><a href="#ref-Akay2017" role="doc-biblioref">6</a>,<a href="#ref-Tohira2012" role="doc-biblioref">7</a></sup></span> The effect of this inherent bias
+on the fairness (distribution of model errors) has not been previously
+studied despite potentially affecting the quality of care provided to
+women.</p>
 <p>The study of fairness in trauma prediction models can help identify
 and correct potential flaws in these models and improve trauma
 outcomes by informing better treatment protocols. The aim of this
@@ -426,7 +413,7 @@ prediction models.</p>
 <h2>Methods</h2>
 <div id="study-design-data-sources" class="section level3">
 <h3>1.1 Study design &amp; data sources</h3>
-<p>Our study is a retrospective analysis of the anonymous multicentre
+<p>Our study is a retrospective analysis of the anonymous multicenter
 Towards Improved Trauma Care Outcomes (TITCO) in India cohort.</p>
 </div>
 <div id="key-study-dates" class="section level3">
@@ -440,7 +427,7 @@ December 2015.</p>
 <p>The patient data was collected from four hospitals within urban,
 Indian cities of Mumbai, New Delhi and Kolkata. This included two
 tertiary care hospitals with dedicated trauma wards and one without,
-while the fourth was a dedicated trauma centre.</p>
+while the fourth was a dedicated trauma center.</p>
 </div>
 <div id="eligibility-criteria" class="section level3">
 <h3>2.2 Eligibility criteria</h3>
@@ -485,9 +472,9 @@ as applicable.</p>
 <div id="sample-size" class="section level3">
 <h3>5. Sample size</h3>
 <p>The TITCO cohort includes 16,000 trauma patients admitted to the four
-participating hospitals. We need at least 393.405696 men and as
-many women, coming to a minimum total sample size of 786.811392,
-to detect an effect size of 0.2 (considered a small effect size<span class="citation"><sup><a href="#ref-Cohen1988" role="doc-biblioref">12</a>,<a href="#ref-Lakens2013" role="doc-biblioref">13</a></sup></span>) when comparing the mean absolute prediction
+participating hospitals. We need at least 393.405696 men and as many
+women, coming to a minimum total sample size of 786.811392, to
+detect an effect size of 0.2 (considered a small effect size<span class="citation"><sup><a href="#ref-Cohen1988" role="doc-biblioref">8</a>,<a href="#ref-Lakens2013" role="doc-biblioref">9</a></sup></span>) when comparing the mean absolute prediction
 error between men and women for any model with 80% power and a
 significance level of 5%.</p>
 </div>
@@ -503,15 +490,29 @@ missing values in any predictor or outcome will be excluded.</p>
 <div id="type-of-model-and-predictor-selection" class="section level3">
 <h3>7.2 Type of model and predictor selection</h3>
 <p>The data collected in the TITCO cohort allows for the comparison of the
-ISS, NISS, TMPM-ICD-10-CM, KTS, TRISS and ASCOT models. The variables
-representative of these models are listed above.</p>
+ISS, NISS, TMPM-ICD-10-CM, KTS, TRISS and ASCOT models. The ISS,
+New ISS and TMPM are based on anatomic region of injury<span class="citation"><sup><a href="#ref-Haider2012" role="doc-biblioref">10</a></sup></span> and
+use the Abbreviated Injury Scale (AIS) which assigns scores based on region
+and type of anatomic structure injured and the severity of the injury.</p>
+<p>Other models use a combination of parameters. The Kampala Trauma Score (KTS)
+uses age, systolic blood pressure (SBP), respiratory rate (RR), neurological
+status and number of injuries; Revised Trauma Score (RTS) uses the Glasgow Coma
+Scale (GCS), SBP and RR;<span class="citation"><sup><a href="#ref-Akay2017" role="doc-biblioref">6</a></sup></span> Trauma and Injury Severity Score (TRISS) is
+a combination of RTS, ISS and age index; while A Severity Characterization of
+Trauma (ASCOT) uses AIS, RTS and age<span class="citation"><sup><a href="#ref-Champion1996" role="doc-biblioref">11</a></sup></span></p>
 </div>
 <div id="measures-used-to-assess-and-compare-model-performance" class="section level3">
 <h3>7.3 Measures used to assess and compare model performance</h3>
-<p>The Mean Absolute Prediction Error (MAPE) for each specified model
-was calculated and compared for differences in sex via independent t-tests.
-Comparisons of MAPE differences across each model were done via paired
-t-tests to assess level of fairness [definition provided elsewhere].</p>
+<p>The mean absolute prediction error for each specified model was
+calculated and is presented separately for men and women. We also
+calculated the absolute and relative difference in mean absolute
+prediction error between men and women. We compare these differences
+using independent t-tests. We also compared differences in mean absolute
+prediction error between men and women across models in a pair wise
+fashion using paired t-tests. A model with a smaller difference in
+mean absolute prediction error was considered more fair.</p>
+<pre class="r"><code>library(readxl)</code></pre>
+<pre><code>## Warning: package &#39;readxl&#39; was built under R version 3.6.3</code></pre>
 </div>
 </div>
 <div id="references" class="section level2 unnumbered">
@@ -526,35 +527,29 @@ t-tests to assess level of fairness [definition provided elsewhere].</p>
 <div id="ref-Cook2014">
 <p>3. Cook A, Weddle J, Baker S, et al. A comparison of the Injury Severity Score and the Trauma Mortality Prediction Model. <em>Journal of Trauma and Acute Care Surgery</em>. 2014;76(1):47-53. doi:<a href="https://doi.org/10.1097/TA.0b013e3182ab0d5d">10.1097/TA.0b013e3182ab0d5d</a></p>
 </div>
-<div id="ref-Haider2012">
-<p>4. Haider AH, Villegas CV, Saleem T, et al. Should the IDC-9 Trauma Mortality Prediction Model become the new paradigm for benchmarking trauma outcomes? <em>Journal of Trauma and Acute Care Surgery</em>. 2012;72(6):1695-1701. doi:<a href="https://doi.org/10.1097/TA.0b013e318256a010">10.1097/TA.0b013e318256a010</a></p>
+<div id="ref-Haider2009">
+<p>4. Haider AH, Crompton JG, Oyetunji T, et al. Females have fewer complications and lower mortality following trauma than similarly injured males: A risk adjusted analysis of adults in the National Trauma Data Bank. <em>Surgery</em>. 2009;146(2):308-315. doi:<a href="https://doi.org/10.1016/j.surg.2009.05.006">10.1016/j.surg.2009.05.006</a></p>
 </div>
-<div id="ref-Osler2019">
-<p>5. Osler TM, Glance LG, Cook A, Buzas JS, Hosmer DW. A trauma mortality prediction model based on the ICD-10-CM lexicon: TMPM-ICD10. <em>Journal of Trauma and Acute Care Surgery</em>. 2019;86(5):891-895. doi:<a href="https://doi.org/10.1097/TA.0000000000002194">10.1097/TA.0000000000002194</a></p>
+<div id="ref-Meng2019">
+<p>5. Meng R, Xu X, Xu Y, et al. Epidemiological characteristics of injury mortality in Guangdong Province, China, 2015. <em>BMC Public Health</em>. 2019;19(1):1-8. doi:<a href="https://doi.org/10.1186/s12889-019-6437-6">10.1186/s12889-019-6437-6</a></p>
 </div>
 <div id="ref-Akay2017">
 <p>6. Akay S, Ozturk AM, Akay H. Comparison of modified Kampala trauma score with trauma mortality prediction model and trauma-injury severity score: A National Trauma Data Bank Study. <em>American Journal of Emergency Medicine</em>. 2017;35(8):1056-1059. doi:<a href="https://doi.org/10.1016/j.ajem.2017.02.035">10.1016/j.ajem.2017.02.035</a></p>
 </div>
-<div id="ref-Champion1996">
-<p>7. Champion H, Copes W, Sacco W, et al. Improved Predictions from A Severity Characterization of Trauma (ASCOT) over Trauma and Injury Severity Score (TRISS): Results of an Independent Evaluation. <em>Journal of Trauma Nursing</em>. 1996;3(2):52. doi:<a href="https://doi.org/10.1097/00043860-199604000-00008">10.1097/00043860-199604000-00008</a></p>
-</div>
-<div id="ref-Lam2016">
-<p>8. Lam SW, Lingsma HF, Beeck EF van, Leenen LPH. Validation of a base deficit-based trauma prediction model and comparison with TRISS and ASCOT. <em>European Journal of Trauma and Emergency Surgery</em>. 2016;42(5):627-633. doi:<a href="https://doi.org/10.1007/s00068-015-0592-y">10.1007/s00068-015-0592-y</a></p>
-</div>
-<div id="ref-Haider2009">
-<p>9. Haider AH, Crompton JG, Oyetunji T, et al. Females have fewer complications and lower mortality following trauma than similarly injured males: A risk adjusted analysis of adults in the National Trauma Data Bank. <em>Surgery</em>. 2009;146(2):308-315. doi:<a href="https://doi.org/10.1016/j.surg.2009.05.006">10.1016/j.surg.2009.05.006</a></p>
-</div>
-<div id="ref-Meng2019">
-<p>10. Meng R, Xu X, Xu Y, et al. Epidemiological characteristics of injury mortality in Guangdong Province, China, 2015. <em>BMC Public Health</em>. 2019;19(1):1-8. doi:<a href="https://doi.org/10.1186/s12889-019-6437-6">10.1186/s12889-019-6437-6</a></p>
-</div>
 <div id="ref-Tohira2012">
-<p>11. Tohira H, Jacobs I, Mountain D, Gibson N, Yeo A. Systematic review of predictive performance of injury severity scoring tools. <em>Scandinavian Journal of Trauma, Resuscitation and Emergency Medicine</em>. 2012;20:1-12. doi:<a href="https://doi.org/10.1186/1757-7241-20-63">10.1186/1757-7241-20-63</a></p>
+<p>7. Tohira H, Jacobs I, Mountain D, Gibson N, Yeo A. Systematic review of predictive performance of injury severity scoring tools. <em>Scandinavian Journal of Trauma, Resuscitation and Emergency Medicine</em>. 2012;20:1-12. doi:<a href="https://doi.org/10.1186/1757-7241-20-63">10.1186/1757-7241-20-63</a></p>
 </div>
 <div id="ref-Cohen1988">
-<p>12. Cohen J. <em>Statistical Power Analysis for the Behavioral Sciences</em>. Academic Press; 2013.</p>
+<p>8. Cohen J. <em>Statistical Power Analysis for the Behavioral Sciences</em>. Academic Press; 2013.</p>
 </div>
 <div id="ref-Lakens2013">
-<p>13. Lakens D. Calculating and reporting effect sizes to facilitate cumulative science: A practical primer for t-tests and ANOVAs. <em>Frontiers in Psychology</em>. 2013;4(NOV):1-12. doi:<a href="https://doi.org/10.3389/fpsyg.2013.00863">10.3389/fpsyg.2013.00863</a></p>
+<p>9. Lakens D. Calculating and reporting effect sizes to facilitate cumulative science: A practical primer for t-tests and ANOVAs. <em>Frontiers in Psychology</em>. 2013;4(NOV):1-12. doi:<a href="https://doi.org/10.3389/fpsyg.2013.00863">10.3389/fpsyg.2013.00863</a></p>
+</div>
+<div id="ref-Haider2012">
+<p>10. Haider AH, Villegas CV, Saleem T, et al. Should the IDC-9 Trauma Mortality Prediction Model become the new paradigm for benchmarking trauma outcomes? <em>Journal of Trauma and Acute Care Surgery</em>. 2012;72(6):1695-1701. doi:<a href="https://doi.org/10.1097/TA.0b013e318256a010">10.1097/TA.0b013e318256a010</a></p>
+</div>
+<div id="ref-Champion1996">
+<p>11. Champion H, Copes W, Sacco W, et al. Improved Predictions from A Severity Characterization of Trauma (ASCOT) over Trauma and Injury Severity Score (TRISS): Results of an Independent Evaluation. <em>Journal of Trauma Nursing</em>. 1996;3(2):52. doi:<a href="https://doi.org/10.1097/00043860-199604000-00008">10.1097/00043860-199604000-00008</a></p>
 </div>
 </div>
 </div>
