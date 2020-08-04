@@ -158,4 +158,14 @@ fashion using paired t-tests. A model with a smaller difference in
 mean absolute prediction error was considered more fair.
 
 
+```{r, echo=FALSE, include=FALSE}
+library(readxl)
+TITCO <- read_excel("titco-I-limited-dataset-v1 Excel.xlsx", 
+    range = "A1:GK1001")
+View(TITCO)
+TITCO <- TITCO[ , c(4:13, 16, 18, 21, 23:29, 32, 34:39, 52:55, 65:68, 127:192)]
+View(TITCO)
+```
+
+
 ## References
