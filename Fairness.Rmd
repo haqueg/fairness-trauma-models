@@ -113,7 +113,6 @@ stats <- pwr.t.test(d = 0.2, power = 0.8, type = "two.sample", alternative = "tw
 stats.paired <- pwr.t.test(d = 0.2, power = 0.8, type = "paired", alternative = "two.sided")
 
 ```
-
 The TITCO cohort includes 16,000 trauma patients admitted to the four
 participating hospitals. We need at least `r stats$n` men and as many
 women, coming to a minimum total sample size of `r stats$n*2`, to
@@ -123,28 +122,29 @@ error between men and women for any model with 80% power and a
 significance level of 5%.
 
 ### 6. Missing data
-
 We will perform a complete case analysis, meaning that patients with
 missing values in any predictor or outcome will be excluded.
 
 ### 7.1 Predictor analysis
 
-[Predictor value description, separately for men and women.]
+Predictor value description, separately for men and women.
 
 ### 7.2 Type of model and predictor selection
 
-The data collected in the TITCO cohort allows for the comparison of the
-ISS, NISS, TMPM-ICD-10-CM, KTS, TRISS and ASCOT models. The ISS,
-New ISS and TMPM are based on anatomic region of injury [@Haider2012] and
-use the Abbreviated Injury Scale (AIS) which assigns scores based on region
-and type of anatomic structure injured and the severity of the injury.
+The data collected in the TITCO cohort allows for the comparison of
+the ISS, NISS, TMPM-ICD-10-CM, KTS, TRISS and ASCOT models. The ISS,
+New ISS and TMPM are based on anatomic region of injury [@Haider2012]
+and use the Abbreviated Injury Scale (AIS) which assigns scores based
+on region and type of anatomic structure injured and the severity of
+the injury.
 
-Other models use a combination of parameters. The Kampala Trauma Score (KTS)
-uses age, systolic blood pressure (SBP), respiratory rate (RR), neurological
-status and number of injuries; Revised Trauma Score (RTS) uses the Glasgow Coma
-Scale (GCS), SBP and RR [@Akay2017]; Trauma and Injury Severity Score (TRISS) is
-a combination of RTS, ISS and age index; while A Severity Characterization of
-Trauma (ASCOT) uses AIS, RTS and age [@Champion1996]
+Other models use a combination of parameters. The Kampala Trauma Score
+(KTS) uses age, systolic blood pressure (SBP), respiratory rate (RR),
+neurological status and number of injuries; Revised Trauma Score (RTS)
+uses the Glasgow Coma Scale (GCS), SBP and RR [@Akay2017]; Trauma and
+Injury Severity Score (TRISS) is a combination of RTS, ISS and age
+index; while A Severity Characterization of Trauma (ASCOT) uses AIS,
+RTS and age [@Champion1996]
 
 ### 7.3 Measures used to assess and compare model performance
 
@@ -157,29 +157,28 @@ prediction error between men and women across models in a pair wise
 fashion using paired t-tests. A model with a smaller difference in
 mean absolute prediction error was considered more fair.
 
-
-
+# Results
 
 ```{r dataset, echo=FALSE, include=FALSE}
-
+## Load required packages
 library(rio)
-import("TITCO CSV.csv")
+library(dplyr)
 
-library(data.table)
-input <-("TITCO CSV.csv")
-TITCO <- fread(input)
+## Import data
+titco <- rio::import("titco-I-full-dataset-v1.csv")
 
-ans <- TITCO[, list(age,incl,sex,tran,doi,toi,doar,toar,doa,toa,ti,sbp_1,rr_1,gcs_t_1,gcs_e_1,gcs_v_1,gcs_m_1,dom_1,tom_1,sbp_2,rr_2,gcs_t_2,gcs_t_2,gcs_e_2,gcs_v_2,gcs_m_2,dom_2,tom_2,sbp_s,ct,fast,xray,died,dodd,todd,dama,head_and_neck,face,chest,abdomen_and_pelvic_contents,extremities,external,iss,niss,e_1_icd,e_2_icd,e_3_icd,e_4_icd,e_5_icd,e_6_icd,e_6_icd,e_7_icd,e_8_icd,e_9_icd,e_10_icd,e_11_icd,xray_1_icd,xray_2_icd,xray_3_icd,xray_4_icd,xray_5_icd,xray_6_icd,xray_7_icd,xray_8_icd,xray_9_icd,xray_10_icd,xray_11_icd,fast_1_icd,fast_2_icd,fast_3_icd,fast_4_icd,fast_5_icd,fast_6_icd,fast_7_icd,fast_8_icd,fast_9_icd,fast_10_icd,fast_11_icd,ct_1_icd,ct_2_icd,ct_3_icd,ct_4_icd,ct_5_icd,ct_6_icd,ct_7_icd,ct_8_icd,ct_9_icd,ct_10_icd,ct_11_icd,ct_12_icd,ct_13_icd,op_1_icd,op_2_icd,op_3_icd,op_4_icd,op_5_icd,op_6_icd,op_7_icd,op_8_icd,op_9_icd,op_10_icd,op_11_icd)]
+## Keep only required variables
+study.data <- titco %>%
+select(age,sex,tran,doi,toi,doar,toar,doa,toa,ti,sbp_1,rr_1,gcs_t_1,gcs_e_1,gcs_v_1,gcs_m_1,dom_1,tom_1,sbp_2,rr_2,gcs_t_2,gcs_t_2,gcs_e_2,gcs_v_2,gcs_m_2,dom_2,tom_2,sbp_s,ct,fast,xray,died,dodd,todd,dama,head_and_neck,face,chest,abdomen_and_pelvic_contents,extremities,external,iss,niss,e_1_icd,e_2_icd,e_3_icd,e_4_icd,e_5_icd,e_6_icd,e_6_icd,e_7_icd,e_8_icd,e_9_icd,e_10_icd,e_11_icd,xray_1_icd,xray_2_icd,xray_3_icd,xray_4_icd,xray_5_icd,xray_6_icd,xray_7_icd,xray_8_icd,xray_9_icd,xray_10_icd,xray_11_icd,fast_1_icd,fast_2_icd,fast_3_icd,fast_4_icd,fast_5_icd,fast_6_icd,fast_7_icd,fast_8_icd,fast_9_icd,fast_10_icd,fast_11_icd,ct_1_icd,ct_2_icd,ct_3_icd,ct_4_icd,ct_5_icd,ct_6_icd,ct_7_icd,ct_8_icd,ct_9_icd,ct_10_icd,ct_11_icd,ct_12_icd,ct_13_icd,op_1_icd,op_2_icd,op_3_icd,op_4_icd,op_5_icd,op_6_icd,op_7_icd,op_8_icd,op_9_icd,op_10_icd,op_11_icd) %>% as_tibble()
 
-```
-
-## Data
-
-```{r}
-
-head(ans)
+## Now go ahead and create the study sample, the sample that includes
+## only the patients with complete data on all predictors and the
+## outcome. You need to decide how to handle missing data in ICD and
+## AIS columns, as that data is not "really" missing. 
 
 ```
+
+The complete TITCO cohort includes `r nrow(titco)` patients. 
 
 
 ## References
