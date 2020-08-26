@@ -1,5 +1,5 @@
 ---
-title: "Fairness in Trauma Prediction Models"
+title: "Fairness"
 author: "Gizelle H"
 date: "11/07/2020"
 csl: american-medical-association.csl
@@ -13,62 +13,173 @@ output:
     toc: false
     keep_tex: yes
 link-citations: yes
-bibliography: Fairness.bib
+bibliography: bibliography.bib
 ---
 
-# Introduction
+# Fairness in Trauma Prediction Models
+
+## Introduction
 
 Trauma continues to be a major contributor to the global burden of
-disease [@James2018], with an estimated 973 million injuries requiring health
-intervention in 2013 alone [@haagsma2016]<!-- Revised this to be more
-direct. Please check for a more recent reference than 2-->. Annually,
-nearly 6 million people die from trauma and over 90% of these deaths
-occur in low- and middle-income countries [@WHO2010]<!-- This is quite
-outdated. The latest GBD study indicate that the number of deaths is
-closer to  4.5 million -->.
+disease - an estimated 520 million injuries required health
+interventions in 2017 alone [@James2018]. Annually, nearly 4.5 million
+people die due to trauma and over 90% of these deaths occur in low-
+and middle-income countries [@Roth2018].
 
-With an expected increase in trauma globally [@WHO2010], it is imperative
-that holistic trauma care is guided by involving various components of
-health systems. This necessitates using prognostic trauma prediction
-models that include clinical parameters, anatomical distribution,
-injury severity scores [@tohira2012], and the type and quality of trauma
-intervention required in the short and long term<!-- Although the flow
-is nice I'm not sure I follow the logic. What is the connection
-between holistic trauma care and prediction models? Why does the
-provision of the former require the latter? Prediction models may be
-needed to guide clinical decision making, quality assurance, and
-research. Maybe you can find a link there?--> .
+Trauma mortality prediction models aim to estimate the probability of
+death in trauma patients and improve quality control and evaluation of
+trauma systems [@Cook2014]. The most commonly used trauma mortality
+prediction models are Trauma Mortality Prediction Model (TMPM), New/Injury
+Severity Score (N/ISS) and the Revised Trauma Score (RTS).
 
-Deaths from trauma occur nearly twice as often in men compared with
-women. Road traffic injury related deaths, which account for a quarter
-of the annual global trauma fatalities, occur almost three times as
-much in men than in women<!-- See edit of previous sentence
--->. However, more women die from burns caused by fires [@WHO2010]. This
-disproportionality can be attributed to historical trends of increased
-risk-taking behavior and interpersonal violence in men<!-- Or that
-women don't reach health facilities... This sentence need an up to
-date reference-->.
+Trauma databases include more men than women [@Haider2009; @Meng2019],
+and most trauma severity scores were developed in overwhelmingly male
+populations [@Akay2017; @Tohira2012]. The effect of this inherent bias
+on the fairness (distribution of model errors) has not been previously
+studied despite potentially affecting the quality of care provided to
+women.
 
-There is a paucity of literature studying the effect of pre-clinical
-factors such as sex on trauma outcomes, and prediction models continue
-to be designed with the same perceptional disparity [@spani2018]<!-- Are you
-sure this reference discuss prediction models? It looks like it deals
-with preclinical model systems.-->. However, given the increased
-participation of women in activities exposing them to higher risk of
-trauma, such an inherent bias in predicted outcomes can potentially
-affect the quality of trauma care provided to women<!-- Also that many
-models that are currently being used were developed in samples in
-which a majority were males. I think this paragraph would benefit from
-mentioning some of these models and the samples in which they were
-developed. Look at TRISS, RTS and KTS (Kampala trauma score), for
-example.-->
+The study of fairness in trauma prediction models can help identify
+and correct potential flaws in these models and improve trauma
+outcomes by informing better treatment protocols. The aim of this
+study is to assess and compare the fairness of various trauma
+prediction models.
 
-It therefore stands to reason that fairness in trauma prediction
-models based on differences of sex need to be evaluated. This can help
-identify and correct any potential flaws in these models and improve
-trauma outcomes by informing better treatment protocols. The aim of
-this study is to apply various trauma prediction models on data
-focusing on both men and women and comparing each to assess the level
-of fairness<!-- This paragraph is okay for now-->.
 
-# References  
+## Methods
+
+### 1.1 Study design & data sources
+
+Our study is a retrospective analysis of the anonymous multicenter
+Towards Improved Trauma Care Outcomes (TITCO) in India cohort.
+
+### 1.2 Key study dates
+
+We conducted this analysis between [dates] based on data directly
+observed or retrieved from patient records between July 2013 and
+December 2015.
+
+### 2.1 Study setting
+
+The patient data was collected from four hospitals within urban,
+Indian cities of Mumbai, New Delhi and Kolkata. This included two
+tertiary care hospitals with dedicated trauma wards and one without,
+while the fourth was a dedicated trauma center.
+
+### 2.2 Eligibility criteria
+
+The TITCO cohort includes all patients presenting with trauma, alive
+at the time of arrival, and who were admitted to the participating
+hospitals, regardless of age or gender. Those dying between arrival
+and admission were also included. The exclusion criteria were subjects
+dead on arrival and those presenting exclusively with peripheral
+injuries.
+
+### 3.1 Predicted outcome
+
+The predicted outcome is death following trauma with or without
+surgical intervention, from time of arrival to hospital to 30 days after.
+
+### 3.2 Actions to blind outcome assessment
+
+All data was collected based on standardized criteria regardless of
+demographic details and outcomes, including all predefined predictors
+as applicable.
+
+### 4.1 Predictors and measurement
+
+- AIS score
+- ICD-10 coding
+- SBP
+- RR
+- GCS
+- Age (index)
+- Number of injuries
+
+### 4.2 Actions to blind predictor assessment
+
+- Ensuring expert opinion in recording intraoperative diagnoses and assigning primary injury.
+- Following standardized coding methods (ICD-10)
+- Ensuring all coders receive similar standardized training for data collection. 
+	
+
+### 5. Sample size
+
+```{r sample-size-calculation, echo = FALSE, include = FALSE}
+
+library(pwr)
+
+stats <- pwr.t.test(d = 0.2, power = 0.8, type = "two.sample", alternative = "two.sided")
+stats.paired <- pwr.t.test(d = 0.2, power = 0.8, type = "paired", alternative = "two.sided")
+
+```
+The TITCO cohort includes 16,000 trauma patients admitted to the four
+participating hospitals. We need at least `r stats$n` men and as many
+women, coming to a minimum total sample size of `r stats$n*2`, to
+detect an effect size of 0.2 (considered a small effect size
+[@Cohen1988; @Lakens2013]) when comparing the mean absolute prediction
+error between men and women for any model with 80% power and a
+significance level of 5%.
+
+### 6. Missing data
+We will perform a complete case analysis, meaning that patients with
+missing values in any predictor or outcome will be excluded.
+
+### 7.1 Predictor analysis
+
+Predictor value description, separately for men and women.
+
+### 7.2 Type of model and predictor selection
+
+The data collected in the TITCO cohort allows for the comparison of
+the ISS, NISS, TMPM-ICD-10-CM, KTS, TRISS and ASCOT models. The ISS,
+New ISS and TMPM are based on anatomic region of injury [@Haider2012]
+and use the Abbreviated Injury Scale (AIS) which assigns scores based
+on region and type of anatomic structure injured and the severity of
+the injury.
+
+Other models use a combination of parameters. The Kampala Trauma Score
+(KTS) uses age, systolic blood pressure (SBP), respiratory rate (RR),
+neurological status and number of injuries; Revised Trauma Score (RTS)
+uses the Glasgow Coma Scale (GCS), SBP and RR [@Akay2017]; Trauma and
+Injury Severity Score (TRISS) is a combination of RTS, ISS and age
+index; while A Severity Characterization of Trauma (ASCOT) uses AIS,
+RTS and age [@Champion1996]
+
+### 7.3 Measures used to assess and compare model performance
+
+The mean absolute prediction error for each specified model was
+calculated and is presented separately for men and women. We also
+calculated the absolute and relative difference in mean absolute
+prediction error between men and women. We compare these differences
+using independent t-tests. We also compared differences in mean absolute
+prediction error between men and women across models in a pair wise
+fashion using paired t-tests. A model with a smaller difference in
+mean absolute prediction error was considered more fair.
+
+# Results
+
+```{r dataset, echo=FALSE, include=FALSE}
+## Load required packages
+library(rio)
+library(dplyr)
+
+## Import data
+titco <- rio::import("titco-I-full-dataset-v1.csv")
+
+## Keep only required variables
+study.data <- titco %>%  dplyr::select(age:toa,ti,sbp_1,rr_1,gcs_t_1:sbp_2,rr_2,gcs_t_2:tom_2,sbp_s:xray,died:dama,head_and_neck:op_11_icd) %>% as_tibble()
+
+colnames(study.data)
+
+## Now go ahead and create the study sample, the sample that includes
+## only the patients with complete data on all predictors and the
+## outcome. You need to decide how to handle missing data in ICD and
+## AIS columns, as that data is not "really" missing. 
+
+```
+
+The complete TITCO cohort includes `r nrow(titco)` patients. 
+
+
+## References
