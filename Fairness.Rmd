@@ -168,9 +168,20 @@ library(dplyr)
 titco <- rio::import("titco-I-full-dataset-v1.csv")
 
 ## Keep only required variables
-study.data <- titco %>%  dplyr::select(age:toa,ti,sbp_1,rr_1,gcs_t_1:sbp_2,rr_2,gcs_t_2:tom_2,sbp_s:xray,died:dama,head_and_neck:op_11_icd) %>% as_tibble()
+dt <- titco %>%  dplyr::select(age:toa,ti,sbp_1,rr_1,gcs_t_1:sbp_2,rr_2,gcs_t_2:tom_2,sbp_s:xray,died:dama,head_and_neck:op_11_icd) %>% as_tibble()
 
-colnames(study.data)
+#colnames(study.data) ## For you to check
+
+summary(dt)
+
+#Checking ISS
+summary(dt$iss)
+dt$iss[is.na(dt$iss)] <- "ND" ## Not Defined
+table(dt$iss) ## For you to check
+
+summary(dt$niss)
+dt$niss[is.na(dt$niss)] <- "ND"
+table(dt$niss)
 
 ## Now go ahead and create the study sample, the sample that includes
 ## only the patients with complete data on all predictors and the
